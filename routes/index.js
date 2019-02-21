@@ -16,6 +16,7 @@ router.post('/webhook', function(req, res, next) {
   issue.attachment.forEach(element => {
     issue.filenames.push(element.filename)
   });
+  console.log("Attachments: %o", issue.filenames);
   res.json(issue);
 });
 
