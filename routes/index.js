@@ -7,6 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/issue_created', function(req, res, next) {
+  console.log("new issue created: %o", req);
   res.send('New JIRA issue created');
 });
 
