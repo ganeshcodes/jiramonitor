@@ -36,12 +36,17 @@ module.exports = function(io) {
     res.render('index', { title: 'JIRA Monitor' });
   });
 
+  router.get('/usecases', function(req, res, next) {
+    res.render('usecases', { title: 'FNC Usecases' });
+  });
+
   /* POST JIRA Webhook */
   router.post('/webhook', function(req, res, next) {
-    console.log("New issue created: ", req.body.key);
+    console.log("New issue created: ", req.body.issue.key);
     var issue = {};
     issue.key = req.body.issue.key;
     issue.attachment = req.body.issue.fields.attachment;
+    issue.summary = req.body.issue.fields.summary;
     issue.filenames = [];
     issue.attachment.forEach(element => {
       issue.filenames.push(element.filename)

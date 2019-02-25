@@ -6,3 +6,19 @@ body {
 a {
   color: #00B7FF;
 }
+
+td {
+  padding: 10px;
+}
+
+ol {
+  padding: 30px;
+  border: 1px dotted;
+  color: forestgreen;
+}
+
+#usecases li {
+  margin-bottom: 40px;
+  font-size: 25px;
+  margin-left: 10px;
+}
