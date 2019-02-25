@@ -1,6 +1,6 @@
 $(document).ready(function(){
     console.log('doc ready');
-    var socket = io('http://localhost:3000');
+    var socket = io('https://jiramonitor.azurewebsites.net/');
       socket.on('newissue', function (issue) {
         console.log("%o", issue);
         refreshUI(issue);
